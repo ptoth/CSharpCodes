@@ -53,7 +53,7 @@ namespace ConsoleApp1
                 int     : 4 bytes Stores whole numbers from - 2,147,483,648 to 2,147,483,647
                 long    : 8 bytes Stores whole numbers from - 9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
                 float   : 4 bytes Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
-                double  : 8 bytes Stores fractional numbers.Sufficient for storing 15 decimal digits
+                double  : 8 bytes Stores fractional numbers. Sufficient for storing 15 decimal digits
             */
 
             int myFirstInt = 1; //stores integers(whole numbers)
@@ -81,8 +81,8 @@ namespace ConsoleApp1
             int myInt = 7;
             double myDouble = myInt;       // Automatic casting: int to double
 
-            Console.WriteLine(myInt);      // Outputs 9
-            Console.WriteLine(myDouble);   // Outputs 9
+            Console.WriteLine(myInt);      // Outputs 7
+            Console.WriteLine(myDouble);   // Outputs 7
 
             // Casting - explicit 
             double myDoubleNum = 9.78;
@@ -123,15 +123,16 @@ namespace ConsoleApp1
              * You cannot get information from another data type, such as int. 
              * The following program will cause an error:
              */
-            Console.WriteLine("Enter your age:");
-            int age = Console.ReadLine();
-            Console.WriteLine("Your age is: " + age);
+            //Console.WriteLine("Enter your age:");
+            //int age = Console.ReadLine();
+            //Console.WriteLine("Your age is: " + age);
 
             // corrected:
             Console.WriteLine("Enter your age:");
             int age2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Your age is: " + age2);
 
+       
 
             /**
             Operators:
@@ -142,6 +143,7 @@ namespace ConsoleApp1
             *=          x *= 3      x = x * 3
             /=          x /= 3      x = x / 3
             %=          x %= 3      x = x % 3
+
             &=          x &= 3      x = x & 3
             |=          x |= 3      x = x | 3
             ^=          x ^= 3      x = x ^ 3
@@ -159,7 +161,7 @@ namespace ConsoleApp1
 
 
             Logical operators:
-            && 	Logical and	Returns true if both statements are true	                x < 5 &&  x < 10	
+            && 	Logical and	Returns true if both statements are true	                x < 5 && x < 10	
             || 	Logical or	Returns true if one of the statements is true	            x < 5 || x < 4	
             !	Logical not	Reverse the result, returns false if the result is true	    !(x < 5 && x < 10)
             */
@@ -184,8 +186,10 @@ namespace ConsoleApp1
             Console.WriteLine("The min is: " + Math.Min(firstNum, secondNum));
             Console.WriteLine("The PI in C#: " + Math.PI);
             Console.WriteLine("Absolute of -3.56 is: " + Math.Abs(-3.56));
-            Console.WriteLine("Rounding 9.521: " + Math.Round(9.521));
-            Console.WriteLine("Flooring 9.521: " + Math.Floor(9.521));
+            Console.WriteLine("Rounding 9.521: " + Math.Round(9.112));
+            Console.WriteLine("Rounding 9.521: " + Math.Ceiling(9.112));
+            Console.WriteLine("Flooring 9.521: " + Math.Floor(9.999));
+
 
             // ================================================================================
             //  Basics
@@ -221,11 +225,12 @@ namespace ConsoleApp1
             string myString = "Hello";
             Console.WriteLine(myString[0]);  // Outputs "H"
             Console.WriteLine(myString[1]);  // Outputs "e"
-            Console.WriteLine(myString.IndexOf("e"));  // Outputs "1"
+            Console.WriteLine(myString.IndexOf("ö"));  // Outputs "1"
 
-            string escapeQuoteString = "We are the so-called \"Hackers\" from the IT world.";
+            string escapeQuoteString = "We are the so-called \"Hackers\\\" from the IT world.";
             Console.WriteLine(escapeQuoteString);
             string example = "The character \\ is called backslash. We can also use a newline with \n character.";
+            Console.WriteLine(example);
 
             // ================================================================================
             //  Basics
@@ -251,7 +256,7 @@ namespace ConsoleApp1
             // ================================================================================
 
             int firstNumber = 20;
-            int secondNumber = 20;
+            int secondNumber = 18;
 
             // if
             if (firstNumber > secondNumber)
@@ -260,7 +265,7 @@ namespace ConsoleApp1
             }
 
             // if-else
-            if (firstNumber > secondNumber)
+            if (firstNumber < secondNumber)
             {
                 Console.WriteLine("First number is greater.");
             }
