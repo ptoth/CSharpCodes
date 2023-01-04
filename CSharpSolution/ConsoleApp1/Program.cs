@@ -315,6 +315,7 @@ namespace _01_ConsoleApp1
                     break;
                 default:
                     Console.WriteLine("Greater than 7");
+                    break;
             }
         }
     }
