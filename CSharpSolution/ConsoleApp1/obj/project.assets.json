@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tothp\\Github\\CSharpCodes\\CSharpSolution\\ConsoleApp1\\ConsoleApp1.csproj",
-      "projectName": "ConsoleApp1",
-      "projectPath": "C:\\Users\\tothp\\Github\\CSharpCodes\\CSharpSolution\\ConsoleApp1\\ConsoleApp1.csproj",
+      "projectUniqueName": "C:\\Users\\tothp\\Github\\CSharpCodes\\CSharpSolution\\ConsoleApp1\\01_ConsoleApp1.csproj",
+      "projectName": "01_ConsoleApp1",
+      "projectPath": "C:\\Users\\tothp\\Github\\CSharpCodes\\CSharpSolution\\ConsoleApp1\\01_ConsoleApp1.csproj",
       "packagesPath": "C:\\Users\\tothp\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\tothp\\Github\\CSharpCodes\\CSharpSolution\\ConsoleApp1\\obj\\",
       "projectStyle": "PackageReference",

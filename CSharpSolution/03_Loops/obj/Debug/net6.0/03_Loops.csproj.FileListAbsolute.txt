@@ -1,0 +1,15 @@
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.csproj.AssemblyReference.cache
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.AssemblyInfoInputs.cache
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.AssemblyInfo.cs
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.csproj.CoreCompileInputs.cache
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\bin\Debug\net6.0\03_Loops.exe
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\bin\Debug\net6.0\03_Loops.deps.json
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\bin\Debug\net6.0\03_Loops.runtimeconfig.json
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\bin\Debug\net6.0\03_Loops.dll
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\bin\Debug\net6.0\03_Loops.pdb
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.dll
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\refint\03_Loops.dll
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.pdb
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\03_Loops.genruntimeconfig.cache
+C:\Users\tothp\Github\CSharpCodes\CSharpSolution\03_Loops\obj\Debug\net6.0\ref\03_Loops.dll

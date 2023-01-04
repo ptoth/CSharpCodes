@@ -2,7 +2,7 @@
 using System;
 
 // namespace will allow us to organize our codes
-namespace ConsoleApp1
+namespace _01_ConsoleApp1
 {
     internal class Program
     {
@@ -10,10 +10,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: basics...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: basics...");
+            Console.ReadLine();
             // ================================================================================
 
             // simple console output
@@ -42,10 +41,9 @@ namespace ConsoleApp1
 
 
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: Basic types...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: Basic types...");
+            Console.ReadLine();
             // ================================================================================
 
 
@@ -103,7 +101,6 @@ namespace ConsoleApp1
 
 
             // ================================================================================
-            //  Basics
             Console.WriteLine("==================================================");
             Console.WriteLine("Next: User input...");
             Console.ReadLine();
@@ -167,10 +164,9 @@ namespace ConsoleApp1
             */
 
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: Math...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: Math...");
+            Console.ReadLine();
             // ================================================================================
 
             // Mathematical calculations are in the Math class
@@ -192,10 +188,9 @@ namespace ConsoleApp1
 
 
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: Strings...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: Strings...");
+            Console.ReadLine();
             // ================================================================================
             
             // string is a collection of characters
@@ -233,10 +228,9 @@ namespace ConsoleApp1
             Console.WriteLine(example);
 
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: Booleans...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: Booleans...");
+            Console.ReadLine();
             // ================================================================================
 
             bool isItTrue = true;
@@ -249,10 +243,9 @@ namespace ConsoleApp1
             Console.WriteLine(x > y);
 
             // ================================================================================
-            //  Basics
-                Console.WriteLine("==================================================");
-                Console.WriteLine("Next: If-then-else...");
-                Console.ReadLine();
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: If-then-else...");
+            Console.ReadLine();
             // ================================================================================
 
             int firstNumber = 20;
@@ -288,6 +281,41 @@ namespace ConsoleApp1
                 Console.WriteLine("Even?");
             }
 
+            // ================================================================================
+            Console.WriteLine("==================================================");
+            Console.WriteLine("Next: switch case...");
+            Console.ReadLine();
+            // ================================================================================
+
+            Random randGen = new Random();
+
+            int day = randGen.Next(7);
+            switch (day)
+            {
+                case 1:
+                    Console.WriteLine("Monday");
+                    break;
+                case 2:
+                    Console.WriteLine("Tuesday");
+                    break;
+                case 3:
+                    Console.WriteLine("Wednesday");
+                    break;
+                case 4:
+                    Console.WriteLine("Thursday");
+                    break;
+                case 5:
+                    Console.WriteLine("Friday");
+                    break;
+                case 6:
+                    Console.WriteLine("Saturday");
+                    break;
+                case 7:
+                    Console.WriteLine("Sunday");
+                    break;
+                default:
+                    Console.WriteLine("Greater than 7");
+            }
         }
     }
 }
