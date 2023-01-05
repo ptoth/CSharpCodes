@@ -1,4 +1,7 @@
-﻿namespace _03_Loops
+﻿using System.Reflection.Metadata;
+using System.Security.Cryptography.X509Certificates;
+
+namespace _03_Loops
 {
     internal class Program
     {
@@ -39,12 +42,14 @@
              */
 
             // Note: it will run once for sure. Then it will check the condition
+            index = 6;
             do
             {
                 Console.WriteLine(index);
                 index++;
             }
             while (index < 5);
+            
 
 
             // ================================================================================
@@ -69,6 +74,12 @@
                 Console.WriteLine(index);
             }
 
+            // variable 'i' only exists in the loop. After it, it is destroyed.
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+
             /*
              * Statement 1 sets a variable before the loop starts(int index = 0).
              * Statement 2 defines the condition for the loop to run(index must be less than 5).If the condition is true, the loop will start over again, if it is false, the loop will end.
@@ -85,6 +96,15 @@
                 Console.WriteLine(index2);
             }
 
+            for (int index2 = 10; index2 >= 0; index2 = index2 - 2)
+            {
+                Console.WriteLine(index2);
+            }
+
+            for (int index2 = 0; index2 <= 10; index2 = index2 + 2)
+            {
+                Console.WriteLine(index2);
+            }
 
             // ================================================================================
             Console.WriteLine("==================================================");
@@ -92,12 +112,12 @@
             Console.ReadLine();
             // ================================================================================// Outer loop
             for (int outerIndex = 1; outerIndex <= 4; outerIndex++)           {   
-                Console.WriteLine("Outer: " + outerIndex);  // Executes 2 times
+                Console.WriteLine("Sorok: " + outerIndex);  // Executes 2 times
 
                 // Inner loop
                 for (int innerIndex = 1; innerIndex <= 3; innerIndex++)
                 {
-                    Console.WriteLine(" Inner: " + innerIndex); // Executes 6 times (2 * 3)
+                    Console.WriteLine(" Oszlopok: " + innerIndex); // Executes 6 times (2 * 3)
                 }
             }
 
@@ -107,15 +127,30 @@
             Console.WriteLine("Next: for loop, but it is for-each...");
             Console.ReadLine();
             // ================================================================================// Outer loop
-            List<string> myWords = new List<string>();
+            List<string> szavak = new List<string>();
 
-            myWords.Add("Apple");
-            myWords.Add("Banana");
-            myWords.Add("Carrot");
+            szavak.Add("Apple");
+            szavak.Add("Banana");
+            szavak.Add("Carrot");
 
-            foreach (string item in myWords)
+            foreach (string aktualisElem in szavak)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(aktualisElem);
+                // listából távolítja el az elemet
+                szavak.Remove(aktualisElem);
+
+                // az adott elemból távolítja az A betűt
+                aktualisElem.Remove('A');
+
+            }
+
+
+            int[] szamok = { 0, 1, 2, 3 };
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                Console.WriteLine(szamok[i]);
+                szamok[i] = 0;
+
             }
 
             Console.ReadLine();

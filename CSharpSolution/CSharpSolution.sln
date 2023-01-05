@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01_ConsoleApp1", "ConsoleAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02_Calculator", "Calculator\02_Calculator.csproj", "{3A1F3123-5052-4EC2-BCAA-D783CFABB3C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03_Loops", "03_Loops\03_Loops.csproj", "{6C42DFA8-5B4D-41DE-83A3-FB299FF6B7ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03_Loops", "03_Loops\03_Loops.csproj", "{6C42DFA8-5B4D-41DE-83A3-FB299FF6B7ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_Arrays", "04_Arrays\04_Arrays.csproj", "{FC969449-2989-4587-93DE-E5132F4F7C76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04_Arrays", "04_Arrays\04_Arrays.csproj", "{FC969449-2989-4587-93DE-E5132F4F7C76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05_Practice", "05_Practice\05_Practice.csproj", "{BF0A870B-329D-4D96-A85B-3645AEF6AD01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FC969449-2989-4587-93DE-E5132F4F7C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC969449-2989-4587-93DE-E5132F4F7C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC969449-2989-4587-93DE-E5132F4F7C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF0A870B-329D-4D96-A85B-3645AEF6AD01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF0A870B-329D-4D96-A85B-3645AEF6AD01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF0A870B-329D-4D96-A85B-3645AEF6AD01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF0A870B-329D-4D96-A85B-3645AEF6AD01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

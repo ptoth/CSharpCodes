@@ -289,7 +289,7 @@ namespace _01_ConsoleApp1
 
             Random randGen = new Random();
 
-            int day = randGen.Next(7);
+            int day = randGen.Next(7)+1;  
             switch (day)
             {
                 case 1:
