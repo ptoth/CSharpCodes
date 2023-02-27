@@ -1,10 +1,30 @@
 ﻿using System.Reflection.Metadata;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace _09_Gyakorlas
 {
     internal class Program
     {
+        // példafüggvények
+        public void fuggveny01()
+        {
+            // nem vár bemeneti paramétert, és nem ad vissza se semmit sem (void)
+        }
+
+        public int fuggvenyOsszegSzamol()
+        {
+            int osszeg = 0;
+
+            return osszeg;
+        }
+
+        public double fuggvenyNegyzetreEmel(int hatvanyAlap)
+        {
+            double osszeg = Math.Pow(hatvanyAlap, 2);
+            return osszeg;
+        }
+
         static void Main(string[] args)
         {
             /*
@@ -159,14 +179,32 @@ namespace _09_Gyakorlas
 
             Console.WriteLine("adja meg, hogy melyik számot keresi:");
             int keresettSzam3 = int.Parse(Console.ReadLine());
-
+            int keresettSzamHelye = -1;
+            
+            int i = 0;
+            while (keresettSzamHelye < 0 && i < tombMerete3)
+            {
+                if (szamokTomb3[i] == keresettSzam3)
+                {
+                    keresettSzamHelye = i;
+                }
+            }
+            Console.WriteLine("A keresett elem helyiértéke:" + i);
 
             //String:
             //Olvass be egy szót, és írd ki a minden második betűjét egymás alá!
+            //A string nem más, mint egy karakterekből álló tömb...
+            // string szoveg = "asdaifmaéfij";
+            // Console.WriteLine(szoveg[2]);
+            
             //Olvass be egy mondatot, és írd ki a szavait egymás alá.
-            //
+            // string split
+
             //Függvények:
             //Készíts programot, amely tetszőleges darab egész számot olvas be.
+            
+
+
             //A programnak legyen egy metódusa, ami egy int tömböt vár paraméternek, és visszaadja a tömbben található legkisebb és legnagyobb elem értékét.
             //A program a függvényből visszaadott értéket írja ki.
             //
