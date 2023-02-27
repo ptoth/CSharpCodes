@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05_Practice", "05_Practice\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06_OOP", "06_OOP\06_OOP.csproj", "{95268EFA-AFD4-420D-86E9-F754879E1B79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07_PoultryFarm", "07_PoultryFarm\07_PoultryFarm.csproj", "{4783563B-BB20-4126-9CD5-1E93E7259162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07_PoultryFarm", "07_PoultryFarm\07_PoultryFarm.csproj", "{4783563B-BB20-4126-9CD5-1E93E7259162}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08_DiceGenerator", "08_DiceGenerator\08_DiceGenerator.csproj", "{1764B4CE-65BA-4216-A793-CF766CEC1847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09_Gyakorlas", "09_Gyakorlas\09_Gyakorlas.csproj", "{5C2C30C7-627E-44D9-B576-37E980112012}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{4783563B-BB20-4126-9CD5-1E93E7259162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4783563B-BB20-4126-9CD5-1E93E7259162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4783563B-BB20-4126-9CD5-1E93E7259162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1764B4CE-65BA-4216-A793-CF766CEC1847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1764B4CE-65BA-4216-A793-CF766CEC1847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1764B4CE-65BA-4216-A793-CF766CEC1847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1764B4CE-65BA-4216-A793-CF766CEC1847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C2C30C7-627E-44D9-B576-37E980112012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2C30C7-627E-44D9-B576-37E980112012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2C30C7-627E-44D9-B576-37E980112012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2C30C7-627E-44D9-B576-37E980112012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
