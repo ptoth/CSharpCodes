@@ -1,222 +1,110 @@
 ﻿using System.Reflection.Metadata;
 using System;
 using System.Security.Cryptography.X509Certificates;
+using System.Globalization;
 
 namespace _09_Gyakorlas
 {
     internal class Program
     {
-        // példafüggvények
-        public void fuggveny01()
-        {
-            // nem vár bemeneti paramétert, és nem ad vissza se semmit sem (void)
-        }
 
-        public int fuggvenyOsszegSzamol()
-        {
-            int osszeg = 0;
-
-            return osszeg;
-        }
-
-        public double fuggvenyNegyzetreEmel(int hatvanyAlap)
-        {
-            double osszeg = Math.Pow(hatvanyAlap, 2);
-            return osszeg;
-        }
 
         static void Main(string[] args)
         {
-            /*
-             * Az alapok:
-             */
-            /*
-            //Írj programot, mely beolvassa egy derékszögű háromszög két befogóját, és megadja az átfogójának a hosszát!
-            //Az átfogót 2 tizedesjeggyel add meg!
-            Console.WriteLine("adja meg a háromszög egyik befogóját");
-            int aBefogo = int.Parse(Console.ReadLine());
-            Console.WriteLine("adja meg a háromszög másik befogóját");
-            int bBefogo = int.Parse(Console.ReadLine());
+            int[] kihuzottSzamok = new int[5];
+            int kihuzottSzamokDb = 0;
+            int[] tippeltSzamok = new int[5];
+            Random randGen = new Random();
+            bool talaltEgyezest = false;
 
-            double atFogo = Math.Sqrt(Math.Pow(aBefogo, 2) + Math.Pow(bBefogo, 2));
-            Console.WriteLine("Az átfogó hossza: " + Math.Round(atFogo, 2));
-
-            //Írj programot, mely beolvassa a téglatest három élének hosszát, és kiírja a felszínének és térfogatának mérőszámát!
-            Console.WriteLine("adja meg a \"a\" él hosszát:");
-            int aElHossz = int.Parse(Console.ReadLine());
-            Console.WriteLine("adja meg a \"b\" él hosszát:");
-            int bElHossz = int.Parse(Console.ReadLine());
-            Console.WriteLine("adja meg a \"c\" él hosszát:");
-            int cElHossz = int.Parse(Console.ReadLine());
-
-            double terfogat = aElHossz * bElHossz * cElHossz;
-            double felszin = 2 * ((aElHossz * bElHossz) + (aElHossz * cElHossz) + (bElHossz * cElHossz));
-            Console.WriteLine("A térfogat: " + terfogat + " a felszín: " + felszin);
-
-            //Írj programot, mely beolvassa egy kör átmérőjét, és kiírja a kör kerületét és területét!
-            Console.WriteLine("adja meg a átmérő hosszát:");
-            int diameter = int.Parse(Console.ReadLine());
-            double radius = diameter / 2;
-            double terulet = Math.Pow(radius,2) * Math.PI;
-            double kerulet = 2 * radius * Math.PI;
-
-            Console.WriteLine("A kerulet: " + kerulet + " a terulet: " + terulet);
-
-            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az egész számokat a képernyőre eddig a számig,
-            //egymástól szóközzel elválasztva!(for ciklussal)
-            Console.WriteLine("adja meg az ön által választott egész számot:");
-            int valasztottSzam = int.Parse(Console.ReadLine());
-            for (int index = 0; index <= valasztottSzam; index++)
-            {
-                Console.Write(index+ " ");
-            }
-
-            //Írj programot, mely beolvas egy pozitív egész számot, és kiírja az egész számokat egymás alá a képernyőre eddig a számig!
-            //(while ciklussal)
-            Console.WriteLine("adja meg az ön által választott egész számot:");
-            int valasztottSzam2 = int.Parse(Console.ReadLine());
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            // számok kihúzása
             int i = 0;
-            while (i <= valasztottSzam2)
+            while (i < kihuzottSzamok.Length && kihuzottSzamokDb <= 5)
             {
-                Console.WriteLine(i + " ");
+                int kihuzottSzam = randGen.Next(1, 7);
+                Console.WriteLine("A " + (i+1) + ". húzott szám: " + kihuzottSzam);
+                
+                if (i == 0)
+                {
+                    kihuzottSzamok[i] = kihuzottSzam;
+                }
+                else
+                {
+                    int j = 0;
+                    while (j < i && talaltEgyezest == false)
+                    {
+                        if (kihuzottSzamok[j] == kihuzottSzam)
+                        {
+                            Console.WriteLine("A " + (j + 1) + ". szám ellenőrzése: Ezt a számot már kihúzták: " + kihuzottSzam);
+                            kihuzottSzamok[i] = 666;
+                            talaltEgyezest=true;
+                            i--;
+                            kihuzottSzamokDb--;
+                        }
+                        else
+                        {
+                            Console.WriteLine("A " + (j + 1) + ". szám ellenőrzése: Ezt a számot még nem húzták: " + kihuzottSzam);
+                            kihuzottSzamok[i] = kihuzottSzam;
+                            kihuzottSzamokDb++;
+                        }
+                        j++;
+                       
+                    }
+                    Console.WriteLine("-------------");
+                    talaltEgyezest = false;
+                }
                 i++;
             }
 
-            //Írj programot, mely addig olvas be számokat a billentyűzetről, ameddig azok kisebbek, mint tíz.
-            //Írja ki ezek után a beolvasott számok összegét!
-
-            ///FIXME
-            
-            int beolvasottSzam = 0;
-            List<int> szamokListaja = new List<int>();
-            while (beolvasottSzam < 10)
+            for (int o = 0; o < kihuzottSzamok.Length; o++)
             {
-                Console.WriteLine("Adjon meg egy számot, ha 10-nél nagyobb, többet beolvasás nincs:");
-                szamokListaja.Add(int.Parse(Console.ReadLine()));
-            }
-            Console.WriteLine(szamokListaja.Sum());
-            */
-
-            //Tömbök:
-            //Olvass be pár számot(a darabszámot is kérje be a program), majd írd ki a páratlanok darabszámát.
-            //Programozási tétel: megszámlálás
-            Console.WriteLine("adja meg, hány számot szeretne megadni:");
-            int tombMeretParatlan = int.Parse(Console.ReadLine());
-            int[] szamokTomb = new int[tombMeretParatlan];
-
-            for (int j = 0; j < tombMeretParatlan; j++)
-            {
-                Console.WriteLine("Adja meg az "+(j+1)+". számot:");
-                szamokTomb[j] = int.Parse(Console.ReadLine());
+                Console.WriteLine("A " + (o+1) + " kihúzott szám a: " + kihuzottSzamok[o]);
             }
 
-            int paratlanSzamokDb = 0;
-            for (int j = 0; j < tombMeretParatlan; j++)
-            {
-                if (szamokTomb[j] % 2 == 1) { paratlanSzamokDb++; }
-            }
-            Console.WriteLine("a páratlan számok darabszáma: "+paratlanSzamokDb);
 
-            //Olvass be egy pár számot(a darabszámot is kérje be a program), majd írd ki a párosok összegét.
-            //Programozási tétel: összegzés
-            Console.WriteLine("adja meg, hány számot szeretne megadni:");
-            int tombMeretParos = int.Parse(Console.ReadLine());
-            int[] szamokTombParos = new int[tombMeretParatlan];
-
-            for (int j = 0; j < tombMeretParatlan; j++)
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            // tippelt számok beolvasása
+            for (int j = 0; j < tippeltSzamok.Length; j++)
             {
-                Console.WriteLine("Adja meg az " + (j + 1) + ". számot:");
-                szamokTombParos[j] = int.Parse(Console.ReadLine());
-            }
+                Console.WriteLine((j + 1) + ". adja meg az egyik számot: ");
+                int ideiglhatos = int.Parse(Console.ReadLine());
 
-            int parosSzamokOsszeg = 0;
-            for (int j = 0; j < tombMeretParatlan; j++)
-            {
-                if (szamokTomb[j] % 2 == 0)
+                if (ideiglhatos > 45)
                 {
-                    parosSzamokOsszeg = parosSzamokOsszeg + szamokTomb[j]; 
+                    Console.WriteLine("Túl nagy számot írtál be!");
+                    j--;
+                }
+
+                else if (ideiglhatos < 1)
+                {
+                    Console.WriteLine("Túl kicsi számot írtál be!");
+                    j--;
+                }
+
+                else
+                {
+                    tippeltSzamok[j] = ideiglhatos;
                 }
             }
-            Console.WriteLine("a páros számok összege: " + parosSzamokOsszeg);
 
-            //Olvassunk be egész számokat egy tömbbe(a darabszámot is kérje be a program), majd kérjünk be egy egész számot, és mondjuk meg, hogy hányszor szerepel a tömbben.
-            //Programozási tétel: megszámlálás
-            Console.WriteLine("adja meg, hány számot szeretne megadni:");
-            int tombMerete2 = int.Parse(Console.ReadLine());
-            int[] szamokTomb2 = new int[tombMerete2];
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            ///
 
-            for (int j = 0; j < tombMerete2; j++)
+            for (int k = 0; k < kihuzottSzamok.Length; k++)
             {
-                Console.WriteLine("Adja meg az " + (j + 1) + ". számot:");
-                szamokTombParos[j] = int.Parse(Console.ReadLine());
+                Console.WriteLine("A "+(k+1)+"következő kihúzott szám a: " + kihuzottSzamok[k]);
             }
 
-            Console.WriteLine("adja meg, hogy melyik számot keresi:");
-            int keresettSzam2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("----------");
 
-            int keresettSzamDarab = 0;
-            for (int j = 0; j < tombMerete2; j++)
+            for (int m = 0; m < tippeltSzamok.Length; m++)
             {
-                if (keresettSzam2 == szamokTomb2[j])
-                {
-                    keresettSzamDarab++;
-                }
-            }
-            Console.WriteLine("a páros számok összege: " + keresettSzamDarab);
-
-            //Olvassunk be egész számokat egy tömbbe(a darabszámot is kérje be a program), majd kérjünk be egy egész számot. 
-            //Keressük meg a tömbben az első ilyen egész számot, majd írjuk ki a tömbindexét.
-            //Ha a tömbben nincs ilyen szám,írjuk ki, hogy a beolvasott szám nincs a tömbben.
-            Console.WriteLine("adja meg, hány számot szeretne megadni:");
-            int tombMerete3 = int.Parse(Console.ReadLine());
-            int[] szamokTomb3 = new int[tombMerete3];
-
-            for (int j = 0; j < tombMerete3; j++)
-            {
-                Console.WriteLine("Adja meg az " + (j + 1) + ". számot:");
-                szamokTombParos[j] = int.Parse(Console.ReadLine());
+                Console.WriteLine("A " + (m + 1) + " következő tippelt szám a: " + tippeltSzamok[m]);
             }
 
-            Console.WriteLine("adja meg, hogy melyik számot keresi:");
-            int keresettSzam3 = int.Parse(Console.ReadLine());
-            int keresettSzamHelye = -1;
-            
-            int i = 0;
-            while (keresettSzamHelye < 0 && i < tombMerete3)
-            {
-                if (szamokTomb3[i] == keresettSzam3)
-                {
-                    keresettSzamHelye = i;
-                }
-            }
-            Console.WriteLine("A keresett elem helyiértéke:" + i);
-
-            //String:
-            //Olvass be egy szót, és írd ki a minden második betűjét egymás alá!
-            //A string nem más, mint egy karakterekből álló tömb...
-            // string szoveg = "asdaifmaéfij";
-            // Console.WriteLine(szoveg[2]);
-            
-            //Olvass be egy mondatot, és írd ki a szavait egymás alá.
-            // string split
-
-            //Függvények:
-            //Készíts programot, amely tetszőleges darab egész számot olvas be.
-            
 
 
-            //A programnak legyen egy metódusa, ami egy int tömböt vár paraméternek, és visszaadja a tömbben található legkisebb és legnagyobb elem értékét.
-            //A program a függvényből visszaadott értéket írja ki.
-            //
-            //A programnak legyen egy metódusa, ami két paramétert vár: egy int tömböt, valamint egy logikai értéket, hogy a páros, vagy páratlan számokat akarjuk megszámolni a tömbben.
-            //A metódus adja vissza, hogy a logikai paraméter által meghatározott típusú számokból hány darab található a tömbben. 
-            //A metódust kétszer hívd meg: számolja össze a páros és páratlan értékeket is.
-            //A program írja ki, hogy páros, vagy páratlan számokból volt több a bemenetben.
-            //
-            //Az első és a második bemenet egy - egy index érték lesz, minden további bemenet kerüljön egy int tömbbe. 
-            //A programnak legyen egy metódusa, ami egy int tömb valahanyadik elemét keresi meg. 
-            //Ehhez 3 paramétert kérjen: az tömböt, a keresendő elem indexét, valamint egy logikai értéket, hogy balról, vagy jobbról keressen a tömbben.
-            //A program hívja meg ezt a metódust kétszer: az első beolvasott indexel balról keress a tömbben, a másodikkal pedig jobbról.Mindkét eredményt írd ki. 
 
         }
     }
